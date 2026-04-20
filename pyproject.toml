@@ -1,13 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "myfluttertool"
-version = "0.1.0"
+name = "MAD-LAB1"
+version = "0.1.1"
+authors = [
+  { name="Uday Natthani", email="your-email@example.com" },
+]
+description = "A custom tool for Flutter project management"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
 
 [project.scripts]
 myflutter = "mytool.main:run"
 
+[tool.setuptools]
+packages = ["mytool"]
+
 [tool.setuptools.package-data]
 mytool = ["template_project/**/*"]
-
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
