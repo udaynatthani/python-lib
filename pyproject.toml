@@ -1,0 +1,13 @@
+[project]
+name = "myfluttertool"
+version = "0.1.0"
+
+[project.scripts]
+myflutter = "mytool.main:run"
+
+[tool.setuptools.package-data]
+mytool = ["template_project/**/*"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
